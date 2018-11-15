@@ -99,15 +99,16 @@ export  const searchUsers = (key, page) => dispatch => {
 
 
 
-export  const deleteUser = (userData) => dispatch => {
+export  const deleteUser = (userData, page, search) => dispatch => {
 
     axios.delete(`/api/user/${userData._id}`)
         .then(()=>{
-            dispatch({
-                type: DELETE_USER,
-                payload: userData
+            if(search&&search.length>0) {
+                dispatch(searchUsers(search, page));
+            } else {
+                dispatch(getUsers(page));
+            }
 
-            })
         }).catch(err=>{
             if(err.response&&err.response.data&&err.response.data.msg) {
                 alert(err.response.data.msg);

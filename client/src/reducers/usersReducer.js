@@ -26,7 +26,7 @@ export default function (state=initialState, action) {
                 ...state
             }
         case DELETE_USER:
-            state.users.splice(state.users.indexOf(action.payload, 1));
+            state.users.splice(state.users.indexOf(action.payload, 1), 1);
 
             return {
                 ...state

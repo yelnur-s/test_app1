@@ -44,6 +44,14 @@
     width: 100%;
 }
 
+.list-empty {
+    display: block;
+    color: rgba(0,0,0,.54);
+    font-size: 24px;
+    text-align: center;
+    margin-top: 40px;
+}
+
 @media (max-width: 1439px) {
 
 }

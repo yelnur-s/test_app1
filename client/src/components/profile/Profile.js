@@ -106,8 +106,7 @@ class Profile extends Component {
     }
 
     deleteUser(data) {
-        this.props.deleteUser(data);
-
+        this.props.deleteUser(data, this.props.users.page, this.state.search);
     }
 
     openEditUser(data){
@@ -166,23 +165,30 @@ class Profile extends Component {
                             Add user
                         </button>)}
                     </div>
-                    <div className="list">
-                        <div className="list-item list-item--title">
-                            <span>Name</span>
-                            <span>Email</span>
-                            <span>Phone</span>
-                            <span>Position</span>
-                            <span>Choose action</span>
-                        </div>
-                        {userList}
-                    </div>
-                    <div className="pagination">
-                        <span className="pagination__arrow" onClick={this.prevPage} >&#10094;</span>
+                    {this.props.users.pages>0&&(<div>
+                            <div className="list">
+                                <div className="list-item list-item--title">
+                                    <span>Name</span>
+                                    <span>Email</span>
+                                    <span>Phone</span>
+                                    <span>Position</span>
+                                    <span>Choose action</span>
+                                </div>
+                                {userList}
+                            </div>
+                            <div className="pagination">
+                                <span className="pagination__arrow" onClick={this.prevPage} >&#10094;</span>
 
-                        {pagesHtml}
+                                {pagesHtml}
 
-                        <span className="pagination__arrow" onClick={this.nextPage} >&#10095;</span>
-                    </div>
+                                <span className="pagination__arrow" onClick={this.nextPage} >&#10095;</span>
+                            </div>
+                    </div>)}
+                    {!(this.props.users.pages>0)&&(
+                        <div className="list-empty">
+                            You don`t have any users :(
+                    </div>)}
+
                 </div>
 
                 {this.state.modalIsOpen&&(<ModalForUser isOpen={this.state.modalIsOpen} showModal={this.showModal} user={this.state.editUser}/>)}
