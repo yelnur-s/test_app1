@@ -1,0 +1,29 @@
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    opacity: 0;
+    /*display: none;*/
+    height: 0;
+    transition: .3s;
+}
+
+.dropdown li {
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+}
+
+.dropdown li:hover {
+    opacity: 0.8;
+}
+
+
+.dropdown.active {
+    display: block;
+    height: auto;
+    opacity: 1;
+    transition: .3s;
+}
+

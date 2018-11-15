@@ -1,0 +1,57 @@
+.list {
+    display: block;
+    padding: 20px 40px;
+}
+
+.list-item {
+    width: 100%;
+    padding: 5px 20px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    height: 50px;
+}
+
+.list-item:hover {
+    background-color: #e7e7e7;
+}
+
+.list-item--title {
+    background-color: #fff;
+}
+
+.list-item--title:hover {
+    background-color: inherit!important;
+}
+
+.list-item span {
+    display: flex;
+    width: 23%;
+    align-items: center;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.list-item span:last-child{
+    width: 8%;
+    justify-content: flex-end;
+    padding-right: 0;
+}
+
+.list-item button img {
+    width: 100%;
+}
+
+@media (max-width: 1439px) {
+
+}
+
+@media (max-width: 1023px) {
+
+}
+
+@media (max-width: 767px) {
+
+}

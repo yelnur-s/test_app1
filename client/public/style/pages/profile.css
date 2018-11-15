@@ -1,0 +1,14 @@
+.profile {
+    justify-content: space-between;
+}
+
+.profile-users {
+    width: 100%;
+}
+
+.profile-header {
+    display: flex;
+    padding: 20px 60px;
+    font-size: 20px;
+    align-items: center;
+}
