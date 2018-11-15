@@ -11,6 +11,7 @@
  * npm install
  * cd ../
  * npm install nodemon -g
+ * npm install concurrently -g
  * npm run dev
 
 
