@@ -52,14 +52,22 @@
     margin-top: 40px;
 }
 
-@media (max-width: 1439px) {
-
-}
-
 @media (max-width: 1023px) {
 
 }
 
 @media (max-width: 767px) {
+    .list-item span {
+        min-width: 150px;
+    }
+
+    .list-item span:last-child{
+        min-width: 100px;
+    }
+
+    .list {
+        width: 100%;
+        overflow: auto;
+    }
 
 }

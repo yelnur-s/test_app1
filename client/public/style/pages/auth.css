@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     min-height: 100vh;
+    flex-flow: wrap;
 }
 
 .auth-content {
@@ -61,4 +62,15 @@
 
 .form-link {
     color: #00a2fa!important;
+}
+
+@media (max-width: 767px) {
+    .auth-info {
+        display: none;
+    }
+
+    .auth-content {
+
+        width: 100%;
+    }
 }
