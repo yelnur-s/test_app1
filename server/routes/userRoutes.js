@@ -159,7 +159,7 @@ router.post('/', passport.authenticate('jwt', { session: false }),isAdmin, async
 
 // Edit user PUT /api/user
 router.put('/', passport.authenticate('jwt', { session: false }),isAdmin,  (req, res, next)=>{
-    let errors = userValidate.addOrEdit(req.body);
+    let errors =await userValidate.addOrEdit(req.body);
     if(!isEmpty(errors)) {
         return res.status(400).send(errors);
     }
